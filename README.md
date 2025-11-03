@@ -57,6 +57,7 @@ This is a complete automated system that acts as an external prefrontal cortex, 
 
 ### Full Implementation
 - **[BUILD_GUIDE.md](./BUILD_GUIDE.md)** - Complete step-by-step implementation guide
+- **[ARCHITECTURE.md](./ARCHITECTURE.md)** - System design and data flow diagrams
 - **[adhd prosthetic system.md](./adhd%20prosthetic%20system.md)** - Full system specification and design principles
 
 ### Maintenance & Support
