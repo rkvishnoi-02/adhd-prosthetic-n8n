@@ -51,8 +51,16 @@ This is a complete automated system that acts as an external prefrontal cortex, 
 
 ## Documentation
 
+### Getting Started
+- **[QUICKSTART.md](./QUICKSTART.md)** - 30-minute setup guide (start here!)
+- **[CONFIGURATION_TEMPLATES.md](./CONFIGURATION_TEMPLATES.md)** - Copy-paste templates for Google Sheets
+
+### Full Implementation
 - **[BUILD_GUIDE.md](./BUILD_GUIDE.md)** - Complete step-by-step implementation guide
 - **[adhd prosthetic system.md](./adhd%20prosthetic%20system.md)** - Full system specification and design principles
+
+### Maintenance & Support
+- **[TROUBLESHOOTING.md](./TROUBLESHOOTING.md)** - Solutions to common issues
 
 ## Features
 
