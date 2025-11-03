@@ -239,7 +239,8 @@ timestamp | milestone_type | action | streak_days | celebration_sent
 ### Step 2.2: Get Your Chat ID
 
 1. Send a message to your new bot (e.g., "hello")
-2. Visit: `https://api.telegram.org/bot<YOUR_BOT_TOKEN>/getUpdates`
+2. Visit: `https://api.telegram.org/bot[YOUR_BOT_TOKEN]/getUpdates`
+   - Replace `[YOUR_BOT_TOKEN]` with the actual token from Step 2.1
 3. Find `"chat":{"id":123456789}` in the response
 4. **Copy the Chat ID number**
 5. Add this Chat ID to your Google Sheet in `persona` sheet → `telegram_chat_id` field
@@ -567,6 +568,7 @@ return [{ json: context }];
   - Credential: [Your Telegram Bot]
   - Operation: `Send Message`
   - Chat ID: `{{ $('Read_Persona_Config').item.json.telegram_chat_id }}`
+    - **Note:** Node name `Read_Persona_Config` must match exactly (case-sensitive)
   - Text: `{{ $json.choices[0].message.content }}`
   - Additional Fields:
     - Parse Mode: `Markdown`

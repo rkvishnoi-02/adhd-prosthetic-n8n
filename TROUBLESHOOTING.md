@@ -40,12 +40,12 @@ Quick solutions to common issues.
    - Credential is valid
 
 3. **Test Bot Token**
-   - Visit: `https://api.telegram.org/bot<TOKEN>/getMe`
+   - Visit: `https://api.telegram.org/bot[YOUR_BOT_TOKEN]/getMe`
    - Should return bot info (not error)
    
 4. **Check Chat ID**
    - Compare chat ID in Google Sheet vs actual
-   - Visit: `https://api.telegram.org/bot<TOKEN>/getUpdates`
+   - Visit: `https://api.telegram.org/bot[YOUR_BOT_TOKEN]/getUpdates`
    - Find your chat in response
 
 ### Bot Sends Duplicate Messages
@@ -65,7 +65,7 @@ Quick solutions to common issues.
 
 **Solution:**
 1. Send message to YOUR bot
-2. Get YOUR chat ID: `https://api.telegram.org/bot<TOKEN>/getUpdates`
+2. Get YOUR chat ID: `https://api.telegram.org/bot[YOUR_BOT_TOKEN]/getUpdates`
 3. Update `persona` sheet → `telegram_chat_id`
 
 ---
