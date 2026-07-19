@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
+import { useRouter } from 'next/navigation';
 import { supabase } from '@/lib/supabase/client';
 
 interface AuthFormProps {
@@ -13,6 +14,9 @@ export function AuthForm({ mode, onSuccess }: AuthFormProps) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [isPending, startTransition] = useTransition();
+
+  // Use useRouter (vercel: rendering-hoist-jsx)
+  const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +54,9 @@ export function AuthForm({ mode, onSuccess }: AuthFormProps) {
 
         // Success - redirect handled by middleware
         onSuccess?.();
-        window.location.href = '/chat';
+        // Refresh router to update server components (middleware check)
+        router.refresh();
+        router.push('/chat');
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Authentication failed');
       }
